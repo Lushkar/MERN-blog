@@ -7,7 +7,10 @@ const ArticleSchema = new Schema(
             type: String,
             required: true
         },
-
+        desc: {
+            type: String,
+            required: true
+        },
         tags: [String],
 
         body: {

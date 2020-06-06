@@ -1,20 +1,21 @@
 .article-card {
     padding: 24px 24px 0px 24px;
-    max-height: 15rem;
+    height: 15rem;
     overflow: hidden;
+    border-bottom: 1px dotted rgb(34, 34, 51);
 }
 
 .card-title {
     color: var(--secondary-color);
     font-size: 26px;
     font-weight: 700;
-    
 }
 
 .card-date {
     color: #8080AE;
     font-size: 17px;
     font-weight: 400;
+    margin-bottom: 6px;
 }
 
 .card-body {
@@ -23,6 +24,7 @@
 
 .tags-container {
     display: flex;
+    margin-bottom: 9px;
 }
 
 .tag-wrapper {
@@ -42,4 +44,5 @@
 .card-divider {
     width: 55%;
     border-color: #707070;
+    margin-bottom: 11px;
 }
