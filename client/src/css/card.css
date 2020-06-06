@@ -1,0 +1,45 @@
+.article-card {
+    padding: 24px 24px 0px 24px;
+    max-height: 15rem;
+    overflow: hidden;
+}
+
+.card-title {
+    color: var(--secondary-color);
+    font-size: 26px;
+    font-weight: 700;
+    
+}
+
+.card-date {
+    color: #8080AE;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.card-body {
+    color: #8080AE;
+}
+
+.tags-container {
+    display: flex;
+}
+
+.tag-wrapper {
+    width: min-content;
+    padding: 0px 0.80em;
+    color: #ffffff;
+    border-radius: 12px;
+    border: solid #707070 1px;
+    margin-right: 11px;
+}
+
+.tag {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card-divider {
+    width: 55%;
+    border-color: #707070;
+}
