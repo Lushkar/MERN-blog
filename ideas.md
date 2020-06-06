@@ -11,8 +11,10 @@
 - First make one about using object detection
 - Go farther if you want to add image segmentation
 
+
 ## Ideas for blog
 - Add a title picture that'll be shown on the home page in the card component
-- Add a description of what the article is going to be about
 - Add better markdown conversion
 - Could add a slug link: slugify
+- Add a page where you can add new articles to your blog
+
