@@ -12,13 +12,13 @@ app.use('/api/articles', articleRouter);
 
 const port = process.env.PORT || 5000;
 
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'client/build/index.html'))
-// })
-
-app.get('/', (req, res) => {
-    res.send(`We're in the debugging phase rn...`)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/build/index.html'))
 })
+
+// app.get('/', (req, res) => {
+//     res.send(`We're in the debugging phase rn...`)
+// })
 
 
 app.listen(port, () => console.log(`listening at http://localhost:${port}`))

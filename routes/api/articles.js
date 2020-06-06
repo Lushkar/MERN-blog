@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/:id', async (req, res) => {
-    console.log(`Navigating to a single article`);
+    console.log(`GETTING a single article`);
     let query = Article.findById(req.params.id);
     query.exec((err, article) => {
         if (!err)
@@ -36,7 +36,6 @@ router.get('/:id', async (req, res) => {
 router.post('/', (req, res) => {
     console.log(`Getting a POST request`);
     let newArtie = new Article(req.body);
-    console.log(req.body);
     newArtie.save(err => {
         if (err) {
             console.error(err)

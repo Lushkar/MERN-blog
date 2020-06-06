@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Tag from './Tag';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown/with-html';
 import '../css/article.css';
 // const ReactMarkdown = require('react-markdown');
 
@@ -38,21 +38,21 @@ class ArticlePage extends Component{
         const day = _date.getDate();
         const month = _date.getMonth();
         const year = _date.getFullYear() % 100;
-
+        const tags = this.state.tags;
         return(
             <div className="article">
                 <h1 className="title">{this.state.title}</h1>
                 <h2 className="date">{day}/{month}/{year}</h2>
                 <div className="tags-container">
                     {
-                        this.state.tags.map((tag, i) => {
+                        tags.map((tag, i) => {
                             return <Tag key={i} tag_name={tag} tagNum={i}/>
                         })
                     }
                 </div>
                 <ReactMarkdown source={this.state.desc}  className='article-desc'/>
                 {/* <hr className='divider'/> */}
-                <ReactMarkdown source={this.state.body}  className='article-body'/>
+                <ReactMarkdown source={this.state.body}  className='article-body' escapeHtml={false}/>
                 
 
                 
