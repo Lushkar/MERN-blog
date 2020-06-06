@@ -17,7 +17,7 @@ class ArticlePage extends Component{
 
 
     componentDidMount() {
-        const url = window.location.pathname;
+        const url = '/api/articles/' + window.location.pathname;
         axios.get(url)
             .then(res => {
                 const {body, createdAt, desc, tags, title} = res.data;
@@ -44,10 +44,12 @@ class ArticlePage extends Component{
                 <h1 className="title">{this.state.title}</h1>
                 <h2 className="date">{day}/{month}/{year}</h2>
                 <div className="tags-container">
-                    {
+                    {   Array.isArray(tags) ?
                         tags.map((tag, i) => {
                             return <Tag key={i} tag_name={tag} tagNum={i}/>
                         })
+                        :
+                        "Loading tags"
                     }
                 </div>
                 <ReactMarkdown source={this.state.desc}  className='article-desc'/>
