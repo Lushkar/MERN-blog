@@ -9,7 +9,7 @@ class Card extends Component {
 
     handleClick = () => {
         const id = this.props.article._id;
-        const url = id;
+        const url = 'articles/' + id;
         window.location.assign(url);
     }
 

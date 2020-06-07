@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Tag from './Tag';
-import ReactMarkdown from 'react-markdown/with-html';
+import ReactMarkdown from 'react-markdown';
 import '../css/article.css';
 // const ReactMarkdown = require('react-markdown');
 
@@ -17,7 +17,7 @@ class ArticlePage extends Component{
 
 
     componentDidMount() {
-        const url = '/api/articles/' + window.location.pathname;
+        const url = '/api/' + window.location.pathname;
         axios.get(url)
             .then(res => {
                 const {body, createdAt, desc, tags, title} = res.data;
@@ -54,7 +54,7 @@ class ArticlePage extends Component{
                 </div>
                 <ReactMarkdown source={this.state.desc}  className='article-desc'/>
                 {/* <hr className='divider'/> */}
-                <ReactMarkdown source={this.state.body}  className='article-body' escapeHtml={false}/>
+                <ReactMarkdown source={this.state.body}  className='article-body'/>
                 
 
                 
