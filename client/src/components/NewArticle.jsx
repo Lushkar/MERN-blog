@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 // import ReactMarkdown from 'react-markdown';
 import CodeBlock from './CodeBlock';
-const ReactMarkdown = require('react-markdown');
+import ReactMarkdown from 'react-markdown';
 
 class ArticlePage extends Component {
 

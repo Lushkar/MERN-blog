@@ -3,10 +3,11 @@ import axios from 'axios';
 import Tag from './Tag';
 // import ReactMarkdown from 'react-markdown';
 import CodeBlock from './CodeBlock';
-import hljs from 'highlight.js';
+import ReactMarkdown from 'react-markdown';
+import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/github.css';
-const ReactMarkdown = require('react-markdown');
-
+import javascript from 'highlight.js/lib/languages/javascript';
+hljs.registerLanguage('javascript', javascript);
 
 class ArticlePage extends Component{
 
@@ -16,9 +17,6 @@ class ArticlePage extends Component{
         createdAt: '',
         tags: [],
         title: ''
-    }
-    componentDidUpdate() {
-        hljs.initHighlighting();
     }
 
     componentDidMount() {
