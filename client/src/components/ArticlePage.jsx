@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Tag from './Tag';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
+import CodeBlock from './CodeBlock';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
+const ReactMarkdown = require('react-markdown');
+
 
 class ArticlePage extends Component{
 
@@ -12,7 +17,9 @@ class ArticlePage extends Component{
         tags: [],
         title: ''
     }
-
+    componentDidUpdate() {
+        hljs.initHighlighting();
+    }
 
     componentDidMount() {
         const url = '/api/' + window.location.pathname;
@@ -26,8 +33,10 @@ class ArticlePage extends Component{
                     title: title,
                     createdAt: createdAt
                 });
+                hljs.initHighlighting();
             })
             .catch(err => console.error(err));
+
     }
 
 
@@ -50,7 +59,7 @@ class ArticlePage extends Component{
                         "Loading tags"
                     }
                 </div>
-                <ReactMarkdown source={this.state.desc}  className='article-desc'/>
+                <ReactMarkdown source={this.state.desc}  className='article-desc' renderers={{code: CodeBlock}}/>
                 <ReactMarkdown source={this.state.body}  className='article-body'/>
                 
 

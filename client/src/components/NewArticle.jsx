@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
+import CodeBlock from './CodeBlock';
+const ReactMarkdown = require('react-markdown');
 
 class ArticlePage extends Component {
 
@@ -74,7 +76,7 @@ class ArticlePage extends Component {
                 <div className="preview">
                     <h1>Preview</h1>
                     <hr/>
-                    <ReactMarkdown source={this.state.body}/>
+                    <ReactMarkdown source={this.state.body} renderers={{code: CodeBlock}}/>
                 </div>
 
             </div>
