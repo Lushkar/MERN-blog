@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Tag from './Tag';
-import '../css/card.css';
+// import '../css/card.css';
 // import {Link, Route} from 'react-router-dom';
 
 const ReactMarkdown = require('react-markdown');

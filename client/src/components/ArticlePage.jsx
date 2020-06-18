@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Tag from './Tag';
 import ReactMarkdown from 'react-markdown';
-import '../css/article.css';
-// const ReactMarkdown = require('react-markdown');
 
 class ArticlePage extends Component{
 
@@ -53,7 +51,6 @@ class ArticlePage extends Component{
                     }
                 </div>
                 <ReactMarkdown source={this.state.desc}  className='article-desc'/>
-                {/* <hr className='divider'/> */}
                 <ReactMarkdown source={this.state.body}  className='article-body'/>
                 
 

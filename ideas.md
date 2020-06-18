@@ -14,7 +14,9 @@
 
 ## Ideas for blog
 - Add a title picture that'll be shown on the home page in the card component
-- Add better markdown conversion
 - Could add a slug link: slugify
-- Add a page where you can add new articles to your blog
-
+- Add an authentication page
+- Add authentication when deleting, editing and making new articles
+- Add syntax highlighting for codes
+- Learn how to work with tables
+- Delete some of the previous articles

@@ -9,7 +9,7 @@ function Tag(props) {
     return (
         <div className='tag-wrapper' style={{
             backgroundColor: tag_colors[i % tag_colors.length]
-        }}>
+            }}>
             <h3 className='tag' 
                 style={{
                     backgroundColor: tag_colors[i % tag_colors.length]

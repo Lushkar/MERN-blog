@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import '../css/newArticle.css';
 import ReactMarkdown from 'react-markdown';
 
 class ArticlePage extends Component {

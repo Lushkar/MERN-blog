@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import './css/index.css'
+// import './css/index.css'
+import './scss/index.scss';
 import {Route} from 'react-router-dom';
 import Home from './components/Home';
 import ArticlePage from './components/ArticlePage';

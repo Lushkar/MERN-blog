@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import hamburger from '../icons/hamburger_menu.svg'
-import '../css/navbar.css'
 
 class NavBar extends Component {
 

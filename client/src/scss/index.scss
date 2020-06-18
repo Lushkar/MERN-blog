@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+$font-stack: 'Montserrat', sans-serif;
+$color-primary: #013D73;
+$color-seconday:  #F58225;
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    font-family: $font-stack;
+}
+
+
+// Nav Bar
+.nav-bar {
+    height: 57px;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 23px;
+
+
+    .blog-title {
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+
+    .menu-button {
+        background: transparent;
+        border: none;
+        width: 40px;
+        padding-top: 4px;
+    }
+}
+
+
+// Cards on the homepage
+.article-card {
+    padding: 24px 24px 0px 24px;
+    height: 15rem;
+    overflow: hidden;
+    border-bottom: 1px dotted rgb(34, 34, 51);
+
+    .card-title {
+        color: $color-seconday;
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .card-date {
+        color: #8080AE; // Need to change this into a variable
+        font-size: 17px;
+        font-weight: 400;
+        margin-bottom: 6px;
+    }
+
+    .card-body {
+        color: #8080AE;
+    }
+
+    .card-divider {
+        width: 55%;
+        border-color: #707070;
+        margin-bottom: 11px;
+    }
+}
+
+// Tags
+.tags-container {
+    display: flex;
+    margin-bottom: 9px;
+
+    .tag-wrapper {
+        width: min-content;
+        padding: 0px 0.80em;
+        color: #ffffff;
+        border-radius: 12px;
+        border: solid #707070 1px;
+        margin-right: 11px;
+
+        .tag {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+
+
+// Article Page
+.article {
+    padding: 20px 15px 0 15px;
+
+    .title {
+        color: $color-seconday;
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .date {
+        color: #8080AE;
+        font-size: 17px;
+        font-weight: 400;
+        margin-bottom: 6px;
+    }
+
+    .article-desc {
+        color: #8080AE;
+        border-bottom: dotted #707070;
+        margin-bottom: 7px;
+        padding-bottom: 10px;
+    }
+
+    .article-body {
+        color: #13131D;
+    }
+}
+
+// New Article
+.new-article {
+    display: grid;
+    grid-template-columns: 15% 35% 35% 15%;
+    margin-top: 5rem;
+
+    .article-form {
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: max-content;
+            border-right: solid black;
+        }
+        
+        
+        input, textarea{
+            display: block;
+            width: 85%;
+        }
+        
+        textarea {
+            min-height: 10rem;
+        }
+        .form-item {
+            margin-top: 1em;
+            width: 100%;
+        }
+        
+        label, h1 {
+            font-size: 35px;
+            color: $color-seconday;
+        }
+        
+        [type=submit] {
+            width: max-content;
+            padding: 14px 25px;
+            font-weight: 600;
+            font-size: 23px;
+            border-radius: 10px;
+            background-color: #E10F0F;
+            color: white;
+            border: none;
+            margin-top: 1em;
+        }
+    }
+
+    .preview {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        padding: 1em 0 0 5em;
+    }
+}
