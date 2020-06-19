@@ -1,12 +1,18 @@
+// Libraries
 import React, {Component} from 'react';
 import axios from 'axios';
-import Tag from './Tag';
-// import ReactMarkdown from 'react-markdown';
-import CodeBlock from './CodeBlock';
 import ReactMarkdown from 'react-markdown';
+
+// Components
+import Tag from './Tag';
+import CodeBlock from './CodeBlock';
+
+// Highlighter
 import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/github.css';
+import 'highlight.js/styles/a11y-dark.css';
 import javascript from 'highlight.js/lib/languages/javascript';
+
+
 hljs.registerLanguage('javascript', javascript);
 
 class ArticlePage extends Component{
@@ -20,7 +26,7 @@ class ArticlePage extends Component{
     }
 
     componentDidMount() {
-        const url = '/api/' + window.location.pathname;
+        const url = '/api' + window.location.pathname;
         axios.get(url)
             .then(res => {
                 const {body, createdAt, desc, tags, title} = res.data;
@@ -57,7 +63,10 @@ class ArticlePage extends Component{
                         "Loading tags"
                     }
                 </div>
-                <ReactMarkdown source={this.state.desc}  className='article-desc' renderers={{code: CodeBlock}}/>
+                <ReactMarkdown source={this.state.desc}
+                  className='article-desc' 
+                  renderers={{code: CodeBlock}}
+                />
                 <ReactMarkdown source={this.state.body}  className='article-body'/>
                 
 

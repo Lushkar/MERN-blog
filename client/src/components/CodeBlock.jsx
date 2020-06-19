@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import hljs from 'highlight.js';
-// import 'highlight.js/styles/github.css';
+import 'highlight.js/styles/github.css';
 import javascript from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('javascript', javascript);
 
@@ -23,6 +23,7 @@ class CodeBlock extends Component {
         this.highlightCode();
     }
 
+    
     highlightCode() {
         hljs.highlightBlock(this.codeEl)
     }
