@@ -9,11 +9,17 @@ import CodeBlock from './CodeBlock';
 
 // Highlighter
 import hljs from 'highlight.js/lib/core';
+// Style
 import 'highlight.js/styles/a11y-dark.css';
+// Languages
 import javascript from 'highlight.js/lib/languages/javascript';
-
+import avrasm from 'highlight.js/lib/languages/avrasm';
+import python from 'highlight.js/lib/languages/python';
 
 hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('avr', avrasm);
+hljs.registerLanguage('python', python);
+
 
 class ArticlePage extends Component{
 
