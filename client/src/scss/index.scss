@@ -4,6 +4,7 @@ $font-stack: 'Montserrat', sans-serif;
 $color-primary: #013D73;
 $color-seconday:  #F58225;
 
+$navbar-height: 57px;
 
 * {
     box-sizing: border-box;
@@ -19,7 +20,7 @@ $color-seconday:  #F58225;
 
 // Nav Bar
 .nav-bar {
-    height: 57px;
+    height: $navbar-height;
     background-color: $color-primary;
     display: flex;
     justify-content: space-between;
@@ -40,6 +41,16 @@ $color-seconday:  #F58225;
         border: none;
         width: 40px;
         padding-top: 4px;
+    }
+
+
+    .menu {
+        position: absolute;
+        height: 100vh;
+        width: 100vh;
+        top: $navbar-height;
+        left: 0;
+
     }
 }
 
